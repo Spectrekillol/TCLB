@@ -303,7 +303,17 @@ AddGlobal(name="LiqTotalVelocityX", comment='use to determine avg velocity of dr
 AddGlobal(name="LiqTotalVelocityY", comment='use to determine avg velocity of droplets', unit="m/s")
 AddGlobal(name="LiqTotalVelocityZ", comment='use to determine avg velocity of droplets', unit="m/s")
 AddGlobal(name="LiqCells",	   		comment='use in line with LiqTotalVelocity to determine average velocity', unit="1")
-AddGlobal(name="DropFront",	op="MAX",  comment='Highest location of droplet', unit="m")
+
+# Globals - Droplet Tracking
+AddGlobal(name="WetArea", comment='Total wetted surface area', unit="1m2")
+AddGlobal(name="WetProjArea", comment='Projected wetted surface area', unit="1m2")
+AddGlobal(name="DropHighX",	op="MAX",  comment='Highest location of droplet in X axis', unit="m")
+AddGlobal(name="DropLowX",	op="MAX",  comment='Lowest location of droplet in X axis', unit="m")
+AddGlobal(name="DropHighY",	op="MAX",  comment='Highest location of droplet in Y axis', unit="m")
+AddGlobal(name="DropLowY",	op="MAX",  comment='Lowest location of droplet in Y axis', unit="m")
+AddGlobal(name="DropHighZ",	op="MAX",  comment='Highest location of droplet in Z axis', unit="m")
+AddGlobal(name="DropLowZ",	op="MAX",  comment='Lowest location of droplet in Z axis', unit="m")
+
 AddNodeType(name="EPressure", group="BOUNDARY")
 AddNodeType(name="EVelocity", group="BOUNDARY")
 AddNodeType(name="Solid", group="BOUNDARY")
