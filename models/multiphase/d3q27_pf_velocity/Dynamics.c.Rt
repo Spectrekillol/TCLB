@@ -493,7 +493,7 @@ CudaDeviceFunction void calcWallPhase(){
 		}
 
 		if (PhaseF > 0.5 & h > 0.001) {
-			AddToWetArea( abs(nw_x)/(abs(nw_x) + 1e-15) + abs(nw_x)/(abs(nw_x) + 1e-15) + abs(nw_x)/(abs(nw_x) + 1e-15) );
+			AddToWetArea(abs(nw_x) + abs(nw_y) + abs(nw_z));
 			if (abs(nw_y) > 0) {
 				AddToWetProjArea(1);
 			}
